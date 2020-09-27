@@ -12,9 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var nameTextField: UITextField!
     
-    @IBAction func didTapLoginButton(){
-        self.performSegue(withIdentifier: "toChat", sender: nil)
-    }
+    var name = ""
     
     func showErrorIfNeeded(_ errorOrNil: Error?) {
         // エラーがなければ何もしません
@@ -25,10 +23,28 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.placeholder = "Name"
+    }
+    
+    @IBAction func didTapLoginButton(){
+        name = nameTextField.text!
+        let db = Firestore.firestore()
+        db.collection("users").addDocument(data: [
+                    "username": name
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                    }
+                }
+        
+        
+        self.performSegue(withIdentifier: "toChat", sender: nil)
     }
     
     

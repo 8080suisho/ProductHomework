@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="VEh-ar-kPZ">
             <objects>
-                <viewController id="AJh-2e-9eh" sceneMemberID="viewController">
+                <viewController id="AJh-2e-9eh" customClass="ChatViewController" customModule="ProductHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IpR-pZ-2ci">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +59,44 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="Ehg-Jh-hRL" customClass="ChatTableViewCell" customModule="ProductHomework" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ehg-Jh-hRL" id="FD7-mQ-Hfh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="messageLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zS-VH-u2P">
+                                                    <rect key="frame" x="20" y="33" width="280" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHl-Tr-sFt">
+                                                    <rect key="frame" x="326" y="18" width="76" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZE-x3-pVN">
+                                                    <rect key="frame" x="20" y="4" width="84" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="RHl-Tr-sFt" id="w1b-TT-VRL"/>
+                                            <outlet property="messageLabel" destination="5zS-VH-u2P" id="Kgx-Fu-vuQ"/>
+                                            <outlet property="nameLabel" destination="yZE-x3-pVN" id="Nyf-Mu-bK2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mxM-Tk-K2U"/>
@@ -66,19 +104,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="AM4-R9-aHU">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="AJ8-8v-ELc"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="irh-p1-Gvy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="irh-p1-Gvy">
+                            <connections>
+                                <segue destination="4nz-Cz-mUO" kind="presentation" id="cfH-Vi-Q04"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="listTableView" destination="1wN-3P-SOn" id="NXX-26-CpG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPQ-M7-Npf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1795.6521739130437" y="130.58035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Message View Controller-->
         <scene sceneID="CEZ-pP-4xA">
             <objects>
-                <viewController id="4nz-Cz-mUO" sceneMemberID="viewController">
+                <viewController id="4nz-Cz-mUO" customClass="PostMessageViewController" customModule="ProductHomework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5oO-Zn-8dy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELy-P0-mVs">
@@ -95,11 +140,17 @@
                                 <state key="normal" title="Post">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapPostButton" destination="4nz-Cz-mUO" eventType="touchUpInside" id="T5f-3r-4dF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wUn-y5-C4C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="ELy-P0-mVs" id="AuJ-ii-Qnv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5q3-Kk-Q1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

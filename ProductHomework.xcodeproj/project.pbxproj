@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		2C6D55FD251E3862004379FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D55FC251E3862004379FA /* Assets.xcassets */; };
 		2C6D5600251E3862004379FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D55FE251E3862004379FA /* LaunchScreen.storyboard */; };
 		2C6D5609251E3953004379FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D5608251E3953004379FA /* GoogleService-Info.plist */; };
+		2C6D561E251E5EF4004379FA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D561D251E5EF4004379FA /* ChatViewController.swift */; };
+		2C6D5621251E5F0E004379FA /* PostMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D5620251E5F0E004379FA /* PostMessageViewController.swift */; };
+		2CC39E5D251FAF41006CE4C6 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC39E5C251FAF41006CE4C6 /* ChatTableViewCell.swift */; };
 		C7C7540A5714FF34649AC031 /* Pods_ProductHomework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A981E952242CDF3FB936142 /* Pods_ProductHomework.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		2C6D55FF251E3862004379FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C6D5601251E3862004379FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C6D5608251E3953004379FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2C6D561D251E5EF4004379FA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2C6D5620251E5F0E004379FA /* PostMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMessageViewController.swift; sourceTree = "<group>"; };
+		2CC39E5C251FAF41006CE4C6 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		9A981E952242CDF3FB936142 /* Pods_ProductHomework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductHomework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +82,9 @@
 				2C6D55F3251E3862004379FA /* AppDelegate.swift */,
 				2C6D55F5251E3862004379FA /* SceneDelegate.swift */,
 				2C6D55F7251E3862004379FA /* ViewController.swift */,
+				2C6D561D251E5EF4004379FA /* ChatViewController.swift */,
+				2C6D5620251E5F0E004379FA /* PostMessageViewController.swift */,
+				2CC39E5C251FAF41006CE4C6 /* ChatTableViewCell.swift */,
 				2C6D55F9251E3862004379FA /* Main.storyboard */,
 				2C6D55FC251E3862004379FA /* Assets.xcassets */,
 				2C6D55FE251E3862004379FA /* LaunchScreen.storyboard */,
@@ -91,7 +100,6 @@
 				0CFA2DF87BB05DABB8CD6F37 /* Pods-ProductHomework.debug.xcconfig */,
 				227A19B117A020501FB24E46 /* Pods-ProductHomework.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -212,6 +220,9 @@
 			files = (
 				2C6D55F8251E3862004379FA /* ViewController.swift in Sources */,
 				2C6D55F4251E3862004379FA /* AppDelegate.swift in Sources */,
+				2C6D5621251E5F0E004379FA /* PostMessageViewController.swift in Sources */,
+				2CC39E5D251FAF41006CE4C6 /* ChatTableViewCell.swift in Sources */,
+				2C6D561E251E5EF4004379FA /* ChatViewController.swift in Sources */,
 				2C6D55F6251E3862004379FA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
