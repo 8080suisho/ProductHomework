@@ -22,8 +22,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4A7-4A-ZaM">
+                                <rect key="frame" x="57" y="244" width="301" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1c-5y-cTY">
+                                <rect key="frame" x="57" y="301" width="301" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG8-o2-FI9">
-                                <rect key="frame" x="154" y="322" width="106" height="66"/>
+                                <rect key="frame" x="154" y="372" width="106" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
@@ -39,7 +51,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="mailTextField" destination="4A7-4A-ZaM" id="mNB-GH-Hzu"/>
                         <outlet property="nameTextField" destination="Nid-v6-XCd" id="OIM-Rq-wvc"/>
+                        <outlet property="passwordTextField" destination="e1c-5y-cTY" id="mrf-l9-YhK"/>
                         <segue destination="mdy-Oq-ZV9" kind="presentation" identifier="toChat" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="FFn-VT-rdf"/>
                     </connections>
                 </viewController>

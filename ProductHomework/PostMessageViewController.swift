@@ -20,7 +20,18 @@ class PostMessageViewController: UIViewController {
     @IBAction func didTapPostButton(){
         message = messageTextField.text!
         messageArray.append(message)
-        self.dismiss(animated: true, completion: nil)
+        let db = Firestore.firestore()
+            db.collection("users").document("message").setData([
+                "message": messageArray
+            ]) { error in
+                if error != nil {
+                    print("エラー")
+                    return
+                }
+                // 成功したときの処理
+                self.dismiss(animated: true, completion: nil)
+            }
+        
     }
 
     override func viewDidLoad() {
